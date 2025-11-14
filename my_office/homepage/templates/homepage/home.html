@@ -4,45 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Office - Home</title>
+
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f4f4f4;
+      :root {
+        --header-bg: #0a0f24;
+        --body-bg: #0e1628;
+        --primary-text: #e6eaff;
+        --accent-color: #4ad4ff;
+        --footer-bg: #010619;
       }
 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background: var(--body-bg);
+        color: var(--primary-text);
+        overflow-x: hidden;
+      }
+
+      /* Header */
       header {
-        background-color: #222;
-        color: white;
-        padding: 15px 30px;
+        background-color: var(--header-bg);
+        padding: 18px 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 2px solid var(--accent-color);
+        animation: slideDown 0.7s ease;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--accent-color);
+        letter-spacing: 1.5px;
+        cursor: default;
       }
 
       nav a {
-        margin-left: 20px;
-        color: white;
+        margin-left: 30px;
+        color: var(--primary-text);
         text-decoration: none;
-        font-weight: 600;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
       }
 
+      nav a:hover {
+        color: var(--accent-color);
+        transform: translateY(-2px);
+      }
+
+      /* About Section */
       .about-section {
-        padding: 50px;
+        padding: 80px 20px;
         text-align: center;
+        animation: fadeIn 1.2s ease;
       }
 
       .about-section h1 {
-        font-size: 32px;
+        font-size: 38px;
+        color: var(--accent-color);
         margin-bottom: 20px;
       }
 
       .about-section p {
-        font-size: 18px;
-        max-width: 600px;
+        font-size: 20px;
+        max-width: 700px;
         margin: auto;
-        line-height: 1.6;
+        line-height: 1.7;
+        opacity: 0.85;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--footer-bg);
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.7;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -63,5 +131,7 @@
         anytime, anywhere.
       </p>
     </section>
+
+    <footer>&copy; 2025 My Office. All rights reserved.</footer>
   </body>
 </html>
