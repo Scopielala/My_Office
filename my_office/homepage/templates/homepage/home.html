@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Office - Home</title>
+    <title>Scopie Office</title>
+    {% load static %}
+    <link
+      rel="icon"
+      type="image/png"
+      href="{%  static 'images/coding.png' %}"
+    />
 
     <style>
       :root {
@@ -73,8 +79,8 @@
       }
 
       .about-section p {
-        font-size: 20px;
-        max-width: 700px;
+        font-size: 15px;
+        max-width: 600px;
         margin: auto;
         line-height: 1.7;
         opacity: 0.85;
@@ -119,6 +125,7 @@
       <div class="logo">MY OFFICE</div>
       <nav>
         <a href="#">About</a>
+        <a href="#"> Dashboard</a>
         <a href="#">Sign Up / Sign In</a>
       </nav>
     </header>
@@ -126,14 +133,17 @@
     <section class="about-section">
       <h1>Welcome to My Office</h1>
       <p>
-        Hello everyone. My name is Ayodeji Aliu. I am a vibe coder, a python
+        Hello everyone, they call me Scopie. I am a vibe coder, a python
         programmer, backend developer using Django to build innovative backend
         services. for the record I started building this Website November 14
         2025, purely for Educational purpose. I hope to see myself grow to
-        become a detailed backend developer.
+        become a detailed backend developer/engineer.
       </p>
+      <hr />
     </section>
 
-    <footer>&copy; 2025 My Office. All rights reserved.</footer>
+    <footer>
+      &lt; &lt; &lt; &copy; 2025 My Office.&gt; &gt; &gt; All rights reserved.
+    </footer>
   </body>
 </html>
